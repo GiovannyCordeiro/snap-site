@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+header{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+}
+
+header .logo {
+    padding-top: 4px;
+    width: 5.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+header .menu-hamburguer {
+    display: block;
+    cursor: pointer;
+}
+
+header .menu-hamburguer img{
+    width: 2.1rem;
+}
+
+.links{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:#fff;
+    width: 64%;
+    height: 100vh;
+}
+
+.links.active{
+    display: block;
+}
+
+.links .close-menu{
+    width: inherit;
+    margin-top: 1.3rem;
+    margin-right: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.links .close-menu img{
+    width: 12%;
+}
+
+.main-links{
+    width: 100%;
+    margin-top: 2.3rem;
+    /* background:green; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-links ul{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    /* background: red; */
+    list-style: none;
+}
+
+.main-links ul li{
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-links ul li img{
+    width: .7rem;
+    height: .4rem;
+}
+
+.main-links a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+
+.others-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    margin-top: 2.3rem;
+}
+
+.others-links .login{
+    font-size: .95rem;
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+}
+
+.others-links .register{
+    font-size: .95rem;
+    padding: .9rem 4.3rem;
+    border-radius: 1rem;
+    border: 2px solid gray;
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+}
+
+
+.attribution { 
+    /* display: none; */
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    top: 90vh;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
