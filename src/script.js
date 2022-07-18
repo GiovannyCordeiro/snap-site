@@ -1,18 +1,19 @@
-const menuHamburguer = document.getElementById('menuHamburguer');
-const closeMenu = document.getElementById('closeMenu');
-const links = document.getElementById('links');
-const blackWindow = document.getElementById('blackwindow');
+const menuMobile = document.getElementById('menu-mobile');
+const allLinks = document.getElementById('all-links');
+const blackWindow = document.getElementById('black-window')
+const closeMenu = document.getElementById('close-menu');
 
-function activeMenuMobile(){
-    links.classList.add('active');
+const openMenuMobile = () => {
+    allLinks.classList.add('active');
     blackWindow.classList.add('active');
 }
 
-function removeMenuMobile(){
-    links.classList.remove('active');
+const closeMenuMobile = () => {
+    allLinks.classList.remove('active');
     blackWindow.classList.remove('active');
 }
 
-menuHamburguer.addEventListener('click', activeMenuMobile)
-closeMenu.addEventListener('click', removeMenuMobile)
-blackWindow.addEventListener('click', removeMenuMobile)
+
+menuMobile.addEventListener('click', openMenuMobile);
+closeMenu.addEventListener('click', closeMenuMobile);
+blackWindow.addEventListener('click', closeMenuMobile)

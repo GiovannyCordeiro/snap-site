@@ -6,120 +6,151 @@
 }
 
 header{
-    height: 8.7vh;
+    display: flex;
+    height: 10vh;
     width: 100%;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+header .logo{
+    width: 4.6rem;
+    line-height: 1.3rem;
+    height: 1.4rem;
     display: flex;
     align-items: center;
+}
+
+header .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+header .mobile-menu{
+    display: none;
+}
+
+header .black-window{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    opacity: 30%;
+}
+
+header .black-window.active{
+    display: block;
+}
+
+header .all-links{
+    display: flex;
     justify-content: space-between;
-    padding: 0 1.2rem;
+    width: inherit;
 }
 
-header .wrapper-logo-links{
+header .all-links .close-menu{
+    display: none;
+}
+
+header .all-links.actice{
     display: flex;
-    align-items: center;
-    gap: 3.6rem;
-    padding: 1.2rem;
 }
 
-header .wrapper-logo-links img{
-    width: 4.5rem;
-}
-
-header .wrapper-logo-links ul{
+header .all-links .main-links ul{
     display: flex;
-    list-style:none;
-    gap: 2.5rem;
-}
-
-header .wrapper-logo-links ul li{
-    font-size: .8rem;
-    display: flex;
-    align-items: center;
-    gap: .3rem;
     position: relative;
+    list-style: none;
+    gap: 2rem;
 }
 
-header .wrapper-logo-links ul li:hover .second-list,
-header .wrapper-logo-links ul li:hover .second-list-company,
-header .wrapper-logo-links ul li:focus-within .second-list,
-header .wrapper-logo-links ul li:focus-within .second-list-company{
+header .all-links .main-links ul li{
+    position: relative;
+    font-size: .7rem;
+    display: flex;
+    line-height: 1.2rem;
+    align-items: center;
+    gap: .4rem;
+}
+
+header .all-links .main-links ul li:hover .second-list,
+header .all-links .main-links ul li:focus-within .second-list{
     display: flex;
 }
 
-header .wrapper-logo-links ul li:hover #arrow{
-    transition: .3s ease-in-out;
-    transform: rotate(180deg);
-    
-}
-
-header .wrapper-logo-links ul li a{
-    text-decoration:none;
+header .all-links .main-links ul li a{
+    text-decoration: none;
     color:hsl(0, 0%, 41%);
 }
 
-header .wrapper-logo-links ul li a:hover{
-    color: hsl(0, 0%, 8%);
+header .all-links .main-links ul li img{
+    width: .6rem;
+    height: .4rem;
 }
 
-header .wrapper-logo-links ul li img{
-    width: .5rem;
-}
-
-header .wrapper-logo-links .second-list{
+header .all-links .main-links .second-list{
     position: absolute;
-    justify-content: center;
-    gap:.8rem;
+    display: none;
     flex-direction: column;
-    top: 2.1rem;
+    top: 1.9rem;
     right: 0;
-    background: #fff;
+    padding: 1rem 1rem;
+    gap: .4rem;
+    background:#fff;
     border-radius: .5rem;
-    padding: 1.4rem 1.1rem;
-    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2); 
-    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
-    display: none;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+
 }
 
-header .wrapper-logo-links .second-list-company{
-    position: absolute;
-    justify-content: center;
-    gap:.8rem;
-    flex-direction: column;
-    top: 2.1rem;
-    left: 0;
-    background: #fff;
-    border-radius: .5rem;
-    padding: 1.4rem 1.3rem;
-    -webkit-box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2); 
-    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
-    white-space:nowrap;
-    display: none;
+header .all-links .main-links .second-list li{
+    display:flex; 
+    gap:0.8rem;
 }
 
-header .wrapper-logo-links .second-list img{
-    width: .8rem;
-    margin-right: .5rem;
+header .all-links .main-links .second-list li img{
+    width: .75rem;
+    height: .8rem;
 }
 
-header .another-links{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding-right: 1rem;
+header .all-links .another-links a{
+    line-height: 1rem;
+    font-size: .7rem;
+    text-decoration: none;
+    color:hsl(0, 0%, 41%);
 }
 
-header .another-links a{
-    font-size: .8rem;
-    text-decoration:none;
-    color: hsl(0, 0%, 41%);
-}
-
-header .another-links #register{
-    padding: .6rem 1rem;
-    border: 2px hsl(0, 0%, 41%) solid;
+header .all-links .another-links #register{
+    padding: .6rem .85rem;
     border-radius: .7rem;
+    border: 2px solid gray;
+    margin-left: 1.5rem;
 }
 
+header .all-links .main-links ul li:hover .second-list-company,
+header .all-links .main-links ul li:focus-within .second-list-company{
+    display: flex;
+}
+
+header .all-links .main-links .second-list-company{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 1.9rem;
+    left: 0;
+    width: 5.7rem;
+    height:6.5rem;
+    padding: 1rem 1rem;
+    gap: .4rem;
+    background:#fff;
+    border-radius: .5rem;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
 
 .attribution { 
     /* display: none; */
@@ -132,4 +163,122 @@ header .another-links #register{
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 740px){
+    header{
+        gap: 0;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    header .mobile-menu{
+        display: flex;
+        cursor: pointer;
+    }
+
+    header .all-links{
+        display: none;
+        width: 64.2%;
+        height: 100%;
+        background-color: #fff;
+        justify-content: unset;
+        top: 0;
+        right: 0;
+        position: absolute;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    header .all-links.active{
+        display: block;
+    }
+    
+    header .all-links .close-menu{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 1.3rem;
+        margin: 1.3rem 0;
+    }
+
+    header .all-links .close-menu img{
+        cursor: pointer;
+    }
+
+    header .all-links .main-links{
+        padding: 1rem 0 1.5rem 1.6rem;
+    }
+
+    /* mudança */
+
+    header .all-links .main-links ul{
+        flex-direction: column;
+    }
+
+    header .all-links .main-links ul li{
+        font-size: 1rem;
+        padding-bottom: .7rem;
+        display: block;
+    }
+
+    header .all-links .main-links ul{
+        gap: 1rem;
+    }
+
+    header .all-links .main-links .second-list{
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-box-shadow: 0; 
+        box-shadow: 0;
+        border-radius:0;
+        gap:.8rem;
+        -webkit-box-shadow: unset; 
+        box-shadow: unset;
+        margin: 1rem 0 0 0;
+        padding-bottom: 0;
+    }
+
+    header .all-links .main-links .second-list-company{
+        top: 0;
+        position: relative;
+        width: 100%;
+        height:100%;
+        border-radius:0;
+        margin: 1rem 0 0 0;
+        padding-bottom: unset;
+        -webkit-box-shadow: unset; 
+        box-shadow: unset;
+    }
+
+    header .all-links .another-links #register{
+        padding: 0;
+        width: 100%;
+        width: 5rem;
+        margin: 0;
+    }
+
+    header .all-links .another-links{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header .all-links .another-links a{
+        font-size: .9rem;
+        margin-bottom: 1rem;
+    }
+
+    header .all-links .another-links #register{
+        padding: unset;
+        padding: .8rem;
+        margin-left: 0rem;
+        width: 75%;
+        text-align: center;
+        border-radius: .7rem;
+        border: 2px solid gray;
+        margin-left: unset;
+    }
 }
