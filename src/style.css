@@ -85,6 +85,11 @@ header .all-links .main-links ul li:focus-within .second-list{
 header .all-links .main-links ul li a{
     text-decoration: none;
     color:hsl(0, 0%, 41%);
+    transition: .3s;
+}
+
+header .all-links .main-links ul li a:hover{
+    color: hsl(0, 0%, 8%);
 }
 
 header .all-links .main-links ul li img{
@@ -122,6 +127,11 @@ header .all-links .another-links a{
     font-size: .7rem;
     text-decoration: none;
     color:hsl(0, 0%, 41%);
+    transition: .3s;
+}
+
+header .all-links .another-links a:hover{
+    color:hsl(0, 0%, 8%);
 }
 
 header .all-links .another-links #register{
@@ -129,6 +139,11 @@ header .all-links .another-links #register{
     border-radius: .7rem;
     border: 2px solid gray;
     margin-left: 1.5rem;
+    transition: .3s;
+}
+
+header .all-links .another-links #register:hover{
+    border: 2px solid hsl(0, 0%, 8%);
 }
 
 header .all-links .main-links ul li:hover .second-list-company,
@@ -182,6 +197,7 @@ main .content .text-content p{
     margin-left: 1rem;
     margin-bottom: 3.7rem;
     line-height: 1.3rem;
+    color: hsl(0, 0%, 41%)
 }
 
 main .content .text-content a{
@@ -192,6 +208,11 @@ main .content .text-content a{
     border-radius: .8rem;
     text-decoration: none;
     font-size: .9rem;
+    transition: .3s;
+}
+
+main .content .text-content a:hover{
+    background: rgb(101, 101, 101);
 }
 
 main .content .text-content .logos{
