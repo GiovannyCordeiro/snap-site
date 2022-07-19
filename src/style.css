@@ -169,8 +169,6 @@ main .content{
 
 main .content .text-content{
     width: 80%;
-    position: relative;
-    right: 0;
     height: 77%;
     /* background:blue; */
 }
@@ -221,6 +219,8 @@ main .image-content{
 main .image-content .image{
     width: 80%;
     height: 90%;
+    display: flex;
+    align-items: center;
     /* background: red; */
     background: url(/images/image-hero-desktop.png) no-repeat center center;
     background-size: contain;
@@ -354,5 +354,66 @@ main .image-content .image{
         border-radius: .7rem;
         border: 2px solid gray;
         margin-left: unset;
+    }
+
+    main{
+        flex-direction: column-reverse;
+    }
+
+    main .image-content{
+        width: 100%;
+        height: 50%;
+        margin-bottom: 0;
+    }
+
+    main .image-content .image{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: url(/images/image-hero-mobile.png) no-repeat center center;
+        background-size: contain;
+        /* background: red; */
+    }
+
+    main .content{
+        align-items: flex-start;
+        padding-top:2rem;
+        width: 100%;
+        height: 50%;
+    }
+
+    main .content .text-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        /* background:blue; */
+    }
+
+    main .content .text-content h2{
+        font-size: 2.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    main .content .text-content p{
+        text-align: center;
+        width: 85%;
+        margin-left:0;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    main .content .text-content a{
+        margin-left: 0;
+    }
+
+    main .content .text-content .logos{
+        margin-top: 1.5rem;
+        justify-content: center;
     }
 }
